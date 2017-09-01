@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Title</title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--http://m.zongheng.com/h5/ajax/chapter?bookId=342974&chapterId=5768909&v=1504248913910&callback=jsonp1-->
+	<script>
+		var nextChapterId = '5768909';
+		function () {
+			
+		}
+		$.ajax({
+			url:'http://m.zongheng.com/h5/ajax/chapter',
+			data:{
+				bookId:'342974',
+				chapterId:'nextChapterId'
+//				v:'1504248913910'
+			},
+			dataType:'jsonp'
+		}).done(function (msg) {
+			$('body').html(msg.result.content)
+		})
+	</script>
+</head>
+<body>
+
+</body>
+</html>
